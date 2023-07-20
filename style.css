@@ -260,23 +260,43 @@ ul>li a {
 
 /* product section styles  */
 .products {
-    margin: 50px 180px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 40px;
-}
-
-.product {
-    display: flex;
-    align-items: center;
+    width: 1240px;
+    margin: 50px auto;
     gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
     justify-content: center;
 }
 
+.product {
+    width: 190px;
+    height: 80px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product:hover {
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 50px;
+    border: 1px solid #FF42A5;
+    height: 70px;
+}
+
+.product-name:hover {
+    color: #F948B2;
+}
+
+
 .product-name {
     color: #0B0223;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 /* footer styles  */
@@ -381,8 +401,8 @@ footer {
 
     .btn-primary,
     .btn-rogue {
-        padding: 15px 30px;
-        font-size: 16px;
+        padding: 12px 20px;
+        font-size: 14px;
     }
 
     .banner-img img {
@@ -481,23 +501,23 @@ footer {
     }
 
     .products {
-        margin: 100px 0px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5px;
-    }
-    .product{
-        margin: 10px 0px;
-    }
-    .product img{
-        width: 20px;
-        height: 20px;
-    }
-    .product-name {
-        font-size: 10px;
-        font-weight: 300;
+        width: 100%;
+        margin: 50px 0px;
+
     }
 
+    .product {
+        width: 100px;
+    }
+
+    .product img {
+        width: 20px;
+    }
+
+    .product .product-name {
+        font-size: 8px;
+        font-weight: 400;
+    }
 
 
     .footer-menu {
@@ -505,13 +525,15 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
     }
-    .footer-menu p{
+
+    .footer-menu p {
         font-size: 10px;
         font-weight: 300;
         margin-right: 10px;
         padding-bottom: 20px;
         text-align: center;
     }
+
     .footer-icon {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -527,49 +549,4 @@ footer {
     }
 
 
-}
-
-
-
-
-/* tablet devices  */
-@media screen and (min-width: 576px) and (max-width: 960px) {
-    nav {
-        height: 250px;
-        margin-top: 50px;
-    }
-
-    nav,
-    nav>ul {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .banner {
-        flex-direction: column-reverse;
-        padding: 0 50px;
-        gap: 100px;
-    }
-
-    .banner-img {
-        padding: 0;
-        margin: 0;
-    }
-
-    .banner-img img {
-        width: 90%;
-    }
-
-    .gamer {
-        flex-direction: column;
-    }
-
-    .gamer-img img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .gamer-content {
-        text-align: center;
-    }
 }
